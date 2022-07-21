@@ -57,6 +57,70 @@ JavaScript과 XML/HTML을 합친 것이다
 코드가 간결해져서 가독성을 높임
 Injection Attacks 방어
 
+### Rendering Elements
+Elements
+- React를 구성하는 가장 작은 블록들을 의미
+
+Elements의 생김새
+- React Elements는 자바스크립트 객체 형태로 존재함
+
+React Elements의 특징
+- 불변성(immutable)을 가지기에 Element 생성 후에 children이나 attribute를 변경할 수 없다.
+- Element를 바꾸고 싶을 때는 변경 사항을 적용해 Element를 다시 생성하고 Element를 교체해 줘야 한다
+
+### Components
+Component-Based (컴포넌트 기반)
+- React는 레고 블록을 조립하듯 Components를 모아서 개발함
+
+Component 만드는 방법
+1. function component
+- 장점은 간단한 코드
+function welcome(props) {
+	return <h1> 안녕, {props.name} </h1>
+}
+
+2. class component
+- function component보다 몇 가지 추가적인 기능을 갖고 있다
+class welcome extends React.component {
+	Render( ) {
+		Return <h1> 안녕, {this.props.name} </h1>;
+	}
+}
+
+Component 이름 규칙
+- 항상 대문자로 시작하여 만들어야 한다.
+- React는 소문자로 시작하는 Component를 DOM 태그로 인식하기 때문
+
+
+### Props
+Props
+- props는 속성을 의미하는 property를 줄여서 쓴 말
+- 즉, React Component의 속성
+- Component에 전달할 다양한 정보를 담고 있는 자바스크립트 객체
+
+Props의 특징
+- 읽기 전용(Read-Only)이기에 값을 변경할 수 없다
+
+React component와 'Pure'
+- 'Pure' 함수는 입력값을 변경하지 않으며, 같은 입력값에 항상 같은 출력값을 반환하는 것을 의미
+- React component는 그들의 props에 관해서 pure 함수와 같은 역할을 해야한다
+- 즉, props를 직접 바꿀 수 없고, 같은 props에 대해서는 항상 같은 결과를 보여줘야 함
+
+Props 사용법
+- Function app(props) {
+	Return (
+		<profile 
+			Name = “김예일”
+			Introduction = “안녕하세요, 김예일입니다.”
+			viewCount = {1500}
+		/>
+	);	
+}
+
+### Component, Element, Props 예시
+- Component는 붕어빵을 만드는 틀
+- Element는 붕어빵이 완성된 것
+- Props는 붕어빵의 속재료인 팥이나 슈크림 
 
 
 
