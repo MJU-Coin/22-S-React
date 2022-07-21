@@ -75,15 +75,15 @@ Component-Based (컴포넌트 기반)
 Component 만드는 방법
 1. function component
 - 장점은 간단한 코드
-function welcome(props) {
-	return <h1> 안녕, {props.name} </h1>
+ function Welcome(props){
+	return <h1>안녕, {props.name}</h1>;
 }
 
 2. class component
 - function component보다 몇 가지 추가적인 기능을 갖고 있다
-class welcome extends React.component {
-	Render( ) {
-		Return <h1> 안녕, {this.props.name} </h1>;
+class Welcome extends React.Component{
+	render(){
+		return <h1>안녕, {this.props.name}</h1>;
 	}
 }
 
