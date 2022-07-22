@@ -110,7 +110,8 @@ React component와 'Pure'
 - 즉, props를 직접 바꿀 수 없고, 같은 props에 대해서는 항상 같은 결과를 보여줘야 함
 
 Props 사용법
-- Function app(props) {
+```jsx
+function app(props) {
 	Return (
 		<profile 
 			Name = “김예일”
@@ -119,12 +120,60 @@ Props 사용법
 		/>
 	);	
 }
+```
 
 ### Component, Element, Props 예시
 - Component는 붕어빵을 만드는 틀
 - Element는 붕어빵이 완성된 것
 - Props는 붕어빵의 속재료인 팥이나 슈크림 
 
+### State
+State란
+- React component의 상태&데이터 즉, 변경 가능한 데이터
+- 렌더링이나 데이터 흐름에 사용되는 값만 state에 포함시켜야 함
+- 자바스크립트 객체 형태
+
+State 사용법
+- Component를 생성할 때 render() 함수보다 먼저 constructor() 함수를 적는다
+- Component 생성자에서 super를 호출하기 전에는 this를 사용할 수 없기 때문
+- 즉, 시작 부분에서 constructor() 함수가 component의 초기화를 시켜줘야 state에 값을 넣을 수 있다.
+
+```jsx
+ class App extends Component {
+  constructor(props) {
+    super(props);
+      this.state={
+				---
+    }
+  }
+	render() {
+    return (
+      	<div className="App">
+      	</div>
+    );
+  }
+}
+```
+State 변경 방법
+- state는 직접 수정하면 안 된다 (잘못된 방법)
+```jsx
+this. State = {
+	Name: ‘yeil’
+};
+```
+- setState() 함수를 통해 수정해야 한다 (정상적인 방법)
+```jsx
+this.setState( {
+	Name: ‘yeil’
+});
+```
+### Lifecycle 생명주기
+-		출생 					 =>					인생  							=>	 			사망
+	Mounting 										Updating 										Unmounting
+	Constructor
+	-------------- render ------------------
+	componentDidmount  			componentDidUpdate  					compoentWillUnmount
+- component는 계속 존재하는 것이 아니라, 시간의 흐름에 따라 생성되고 업데이트 되다가 사라진다
 
 
 
