@@ -169,10 +169,10 @@ this.setState( {
 ```
 ### Lifecycle 생명주기
 -		출생 					 =>					인생  							=>	 			사망
-	Mounting 										Updating 										Unmounting
-	Constructor
-	-------------- render ------------------
-	componentDidmount  			componentDidUpdate  					compoentWillUnmount
+-	Mounting 										Updating 										Unmounting
+-	Constructor
+-	-------------- render ------------------
+-	componentDidmount  			componentDidUpdate  					compoentWillUnmount
 - component는 계속 존재하는 것이 아니라, 시간의 흐름에 따라 생성되고 업데이트 되다가 사라진다
 
 
